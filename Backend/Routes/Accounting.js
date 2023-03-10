@@ -1,0 +1,16 @@
+const express=require('express');
+const {estimateRecieved,estimateAdd,invoiceRecieved,invoiceAdd,incomeRecieved,incomeAdd,expensesRecieved,expensesAdd,recurringExpensesRecieved,recurringExpensesAdd,paymentsRecieved,paymentsAdd}=require('../Controllers/Accounting.js');
+const router=express.Router();
+router.route('/EstimateRecieved').get(estimateRecieved);
+router.route('/EstimateAdd').post(estimateAdd);
+router.route('/InvoiceRecieved').get(invoiceRecieved);
+router.route('/InvoiceAdd').post(invoiceAdd);
+router.route('/IncomeRecieved').get(incomeRecieved);
+router.route('/IncomeAdd').post(incomeAdd);
+router.route('/ExpensesRecieved').get(expensesRecieved);
+router.route('/ExpensesAdd').post(expensesAdd);
+router.route('/RecurringExpensesRecieved').get(recurringExpensesRecieved);
+router.route('/RecurringExpensesAdd').post(recurringExpensesAdd);
+router.route('/PaymentsRecieved').get(paymentsRecieved);
+router.route('/PaymentsAdd').post(paymentsAdd);
+module.exports=router;
